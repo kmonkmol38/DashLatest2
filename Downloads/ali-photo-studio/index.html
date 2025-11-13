@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALI's Photo Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'bkg': 'hsl(var(--bkg))',
+              'content': 'hsl(var(--content))',
+              'primary': 'hsl(var(--primary))',
+              'primary-hover': 'hsl(var(--primary-hover))',
+              'secondary': 'hsl(var(--secondary))',
+              'border': 'hsl(var(--border))',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bkg: 222 47% 11%;
+        --content: 210 40% 98%;
+        --primary: 217 91% 60%;
+        --primary-hover: 217 91% 70%;
+        --secondary: 215 28% 17%;
+        --border: 215 28% 23%;
+      }
+      html.light {
+        --bkg: 0 0% 100%;
+        --content: 222 47% 11%;
+        --primary: 221 83% 53%;
+        --primary-hover: 221 83% 63%;
+        --secondary: 210 40% 96%;
+        --border: 214 32% 91%;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-bkg text-content antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
